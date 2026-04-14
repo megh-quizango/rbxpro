@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "854545984007",
+    "firebase_url": "https://rbxpro-56fa0-default-rtdb.firebaseio.com",
+    "project_id": "rbxpro-56fa0",
+    "storage_bucket": "rbxpro-56fa0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854545984007:android:dd9b985525a7ef70e298a2",
+        "android_client_info": {
+          "package_name": "freerobux.get.rbx.counter.rblx.calcpro.rbuxcalc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL9jFdsghsQIczUR6dRQwU_sBBTkI7md8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854545984007:android:7d5706e96c7ac931e298a2",
+        "android_client_info": {
+          "package_name": "com.quizangomedia.rbxpro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL9jFdsghsQIczUR6dRQwU_sBBTkI7md8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
