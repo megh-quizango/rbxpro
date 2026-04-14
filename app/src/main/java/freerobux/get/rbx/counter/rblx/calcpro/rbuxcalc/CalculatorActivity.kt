@@ -96,7 +96,7 @@ class CalculatorActivity : AppCompatActivity() {
             HomeAction.TBCToRbx -> "TBC To Rbx"
             HomeAction.OBCToRbx -> "OBC To Rbx"
             HomeAction.QuizTime -> "Calculator"
-            HomeAction.ChromeOnly -> "Calculator"
+            else -> "Calculator"
         }
 
         inputHeading.text = when (action) {
@@ -104,14 +104,14 @@ class CalculatorActivity : AppCompatActivity() {
             HomeAction.RbxToDollar -> "Enter Your Rbx"
             HomeAction.BCToRbx, HomeAction.TBCToRbx, HomeAction.OBCToRbx -> "Enter THe Number"
             HomeAction.QuizTime -> "Enter Value"
-            HomeAction.ChromeOnly -> "Enter Value"
+            else -> "Enter Value"
         }
 
         inputEdit.hint = when (action) {
             HomeAction.DollarToRbx, HomeAction.RbxToDollar -> "Enter amount.."
             HomeAction.BCToRbx, HomeAction.TBCToRbx, HomeAction.OBCToRbx -> "Enter The number of day"
             HomeAction.QuizTime -> "Enter value.."
-            HomeAction.ChromeOnly -> "Enter value.."
+            else -> "Enter value.."
         }
 
         actionBtn.setImageResource(
@@ -119,7 +119,7 @@ class CalculatorActivity : AppCompatActivity() {
                 HomeAction.DollarToRbx, HomeAction.RbxToDollar -> R.drawable.count_now
                 HomeAction.BCToRbx, HomeAction.TBCToRbx, HomeAction.OBCToRbx -> R.drawable.calculate
                 HomeAction.QuizTime -> R.drawable.count_now
-                HomeAction.ChromeOnly -> R.drawable.count_now
+                else -> R.drawable.count_now
             }
         )
 
@@ -305,7 +305,7 @@ class CalculatorActivity : AppCompatActivity() {
             }
 
             HomeAction.QuizTime -> String.format(Locale.US, "%.2f", value)
-            HomeAction.ChromeOnly -> String.format(Locale.US, "%.2f", value)
+            else -> String.format(Locale.US, "%.2f", value)
         }
     }
 

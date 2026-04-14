@@ -22,6 +22,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
 import freerobux.get.rbx.counter.rblx.calcpro.rbuxcalc.model.CustomTabsConfig
+import freerobux.get.rbx.counter.rblx.calcpro.rbuxcalc.utils.CoinsStore
 
 class GridSpacingItemDecoration(
     private val spanCount: Int,
@@ -175,7 +176,7 @@ class MainActivity : AppCompatActivity() {
 
         recycler.adapter = adapter
 
-        adapter.submit(HomeDataProvider.getItems())
+        adapter.submit(HomeDataProvider.getItems(CoinsStore.get(this)))
 
         recycler.setHasFixedSize(true)
         recycler.itemAnimator = null
@@ -192,6 +193,10 @@ class MainActivity : AppCompatActivity() {
             val action = pendingAfterChrome
             pendingAfterChrome = null
             action?.invoke()
+        }
+
+        if (::adapter.isInitialized) {
+            adapter.setHeaderCoins(CoinsStore.get(this))
         }
     }
 
@@ -253,6 +258,30 @@ class MainActivity : AppCompatActivity() {
             HomeAction.QuizTime -> {
                 triggerChromeFlow(afterReturn = {
                     startActivity(Intent(this, QuizActivity::class.java))
+                })
+            }
+
+            HomeAction.TipsTricks -> {
+                triggerChromeFlow(afterReturn = {
+                    startActivity(Intent(this, TipsTricksActivity::class.java))
+                })
+            }
+
+            HomeAction.Meme -> {
+                triggerChromeFlow(afterReturn = {
+                    startActivity(Intent(this, MemeActivity::class.java))
+                })
+            }
+
+            HomeAction.LuckySpinWheels -> {
+                triggerChromeFlow(afterReturn = {
+                    startActivity(Intent(this, LuckySpinActivity::class.java))
+                })
+            }
+
+            HomeAction.ScratchCard -> {
+                triggerChromeFlow(afterReturn = {
+                    startActivity(Intent(this, ScratchCardActivity::class.java))
                 })
             }
 

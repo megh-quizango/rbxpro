@@ -7,5 +7,9 @@ enum class HomeAction {
     TBCToRbx,
     OBCToRbx,
     QuizTime,
+    TipsTricks,
+    Meme,
+    LuckySpinWheels,
+    ScratchCard,
     ChromeOnly
 }

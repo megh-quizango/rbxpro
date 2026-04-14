@@ -28,6 +28,13 @@ class HomeAdapter(
         notifyDataSetChanged()
     }
 
+    fun setHeaderCoins(coins: Int) {
+        val header = items.firstOrNull() as? HomeItem.Header ?: return
+        if (header.coins == coins) return
+        items[0] = header.copy(coins = coins)
+        notifyItemChanged(0)
+    }
+
     override fun getItemViewType(position: Int): Int {
         return when (items[position]) {
             is HomeItem.Card -> VIEW_TYPE_CARD

@@ -36,6 +36,31 @@
             android:theme="@style/Theme.RBXApp" />
 
         <activity
+            android:name=".TipsTricksActivity"
+            android:exported="false"
+            android:theme="@style/Theme.RBXApp" />
+
+        <activity
+            android:name=".TipDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.RBXApp" />
+
+        <activity
+            android:name=".MemeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.RBXApp" />
+
+        <activity
+            android:name=".LuckySpinActivity"
+            android:exported="false"
+            android:theme="@style/Theme.RBXApp" />
+
+        <activity
+            android:name=".ScratchCardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.RBXApp" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

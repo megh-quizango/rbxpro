@@ -4,9 +4,9 @@ import freerobux.get.rbx.counter.rblx.calcpro.rbuxcalc.R
 
 object HomeDataProvider {
 
-    fun getItems(): List<HomeItem> {
+    fun getItems(coins: Int): List<HomeItem> {
         return listOf(
-            HomeItem.Header(coins = 0),
+            HomeItem.Header(coins = coins),
 
             // Grid 1
             HomeItem.Card("Dollar To Rbx", R.drawable.dr_to_rb, HomeAction.DollarToRbx),
@@ -29,7 +29,7 @@ object HomeDataProvider {
             HomeItem.Card("Play Game", R.drawable.gameplay, HomeAction.ChromeOnly),
 
             // Grid 4
-            HomeItem.Card("Scratch Card", R.drawable.scratch, HomeAction.ChromeOnly),
+            HomeItem.Card("Scratch Card", R.drawable.scratch, HomeAction.ScratchCard),
             HomeItem.Card("OBC To Rbx", R.drawable.obc_to_rbx, HomeAction.OBCToRbx),
 
             // Banner 2
@@ -45,7 +45,7 @@ object HomeDataProvider {
             HomeItem.Card("Quiz Time", R.drawable.quiz_time, HomeAction.QuizTime),
 
             // Grid 6
-            HomeItem.Card("Lucky Spin Wheels", R.drawable.spins, HomeAction.ChromeOnly),
+            HomeItem.Card("Lucky Spin Wheels", R.drawable.spins, HomeAction.LuckySpinWheels),
             HomeItem.Card("Play Game", R.drawable.gameplay, HomeAction.ChromeOnly),
 
             // Banner 3
@@ -57,8 +57,8 @@ object HomeDataProvider {
             ),
 
             // Grid 7
-            HomeItem.Card("Tips & Tricks", R.drawable.trick, HomeAction.ChromeOnly),
-            HomeItem.Card("Meme", R.drawable.jokes, HomeAction.ChromeOnly),
+            HomeItem.Card("Tips & Tricks", R.drawable.trick, HomeAction.TipsTricks),
+            HomeItem.Card("Meme", R.drawable.jokes, HomeAction.Meme),
         )
     }
 }
